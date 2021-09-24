@@ -1,0 +1,100 @@
+<header class="title text-center">
+  <h2>Cotação</h2>
+</header>
+
+
+<div class="container " *ngFor="let item of aprovaCotacao">
+
+  <div class="ajuste-top-content cotacao-info">
+      <div class="info-left">
+        <ul style="margin-left: 50px;">
+          <li>Cód. Cliente: </li>
+          <li>Razão Social: </li>
+          <li>Endereço: </li>
+        </ul>
+        <ul>
+          <li>{{item.customer.id}}</li>
+          <li>{{item.customer.companyName}}</li>
+          <li>{{item.customer.address}}</li>
+        </ul>
+      </div>
+    
+    <div class="info-right">
+      <ul style="margin-left: 140px;">
+        <li>Cód. Cotação: </li>
+        <li>Status: </li>
+        <li>Data de processamento: </li>
+      </ul>
+      <ul>
+        <li>{{item.id}}</li>
+        <li>{{item.status ? "Cancelado" : "Pendente"}}</li>
+        <li>{{item.quotaDate | date:'dd/MM/yyyy'}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container p-3 my-3 cotacao-template" >
+    
+      <table class="table-cotacao">
+        <thead>
+          <tr>
+            <th>Cód. Produto</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário R$ </th>
+            <th>Total R$</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let prod of item.quotationProducts">
+          <tr>
+            <th>{{prod.product.id}}</th>
+            <th>{{prod.product.description}}</th>
+            <th>{{prod.qty}}</th>
+            <th>{{prod.product.unitValue | currency:'BRL':'symbol':'1.2-2'}}</th>
+            <th>{{prod.total | currency:'BRL':'symbol':'1.2-2'}}</th>
+          </tr>
+        </tbody>
+      </table>
+      <div style="float: right; display: inline-grid; padding-top: 115px;">
+        <div class="info-total mx-auto">
+          <ul style="display: inline-flex;">
+            <li>Valor Total:</li>&nbsp;&nbsp;
+            <li>{{item.totalValue | currency:'BRL':'symbol':'1.2-4'}}</li>
+          </ul>
+        </div>
+    
+    <div class="btn-group">
+      <div>
+        <a class="btn btn-success " style="color: #ffffff;"><i class="fa fa-check" aria-hidden="true"></i>
+          &nbsp;<span>Aprovar</span></a>&nbsp;&nbsp;
+      </div>
+      <div>
+        &nbsp;&nbsp;<a class="btn btn-danger " ><i class="fa fa-times" aria-hidden="true"></i>
+          &nbsp;<span>Reprovar</span></a>
+      </div>
+    </div>
+  </div>
+
+      <!-- <div>
+    <a class="btn btn-info" style="float: right;" href="javascript:void(0)" (click)="abrirModal(content)">
+      <span title="Comentar" class="fa fa-comments"></span>
+    </a>
+  </div>
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Adicionar Comentário</h4>
+    
+      <button type="button" class="close" aria-label="Close" (click)="d('')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+  </div>
+  <div class="modal-body">
+    <textarea style="width: 600px; border-color: #cccaca;"></textarea>
+  </div>
+  <div class="modal-footer">
+    <input type="submit" value="enviar" class="btn btn-primary">
+  </div>
+  </ng-template>-->
+
+</div>

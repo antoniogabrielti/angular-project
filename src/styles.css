@@ -1,0 +1,288 @@
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.main-container {
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+/* You can add global styles to this file, and also import other style files */
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.formulario{
+    width: 500px;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 31px -8px rgba(155,166,242,0.61);
+
+}
+/* Sticky footer styles
+  -------------------------------------------------- */
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+}
+}
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+/* Sticky footer styles
+  -------------------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;    
+
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #f4f4f4;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    /* Vertically center the text there */
+}
+
+input,
+select,
+file,
+textarea {
+    max-width: 400px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+/* Cotações*/
+.cotacao-template, .cotacao-info{
+    margin-top: 30px;
+    background-color: #fff;
+	border-radius: 5px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 5px 10px rgba(0,0,0,0.09);
+	position: relative;
+	overflow: auto;
+	width: 80%;
+	max-width: 100%;
+    min-height: 385px;
+}
+
+.table-cotacao{
+    width: 100%;
+    margin-top: 20px;
+    /* margin-left: 30px; */
+    color: #707070;
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+thead{
+    border-bottom: 1px solid #E1DFDF; 
+}
+
+tbody {
+    margin-top: 20px;
+}
+
+tbody tr td{
+    font-weight: 500;
+    padding-top: 15px;
+    text-align: center;
+    border-bottom: 1px solid #E1DFDF;
+    color:#6C757D;
+    padding-bottom: 15px;
+}
+
+.cancelar{
+    position: absolute;
+    background-color: #fff;
+    float: right;
+    margin-top: 230px;
+    margin-right: 45rem;
+    display: inline-flex;   
+
+}
+
+.confirmar{
+    position: absolute;
+   color: #fff;
+   float: right;
+   margin-top: 230px;
+   margin-right: 0;
+
+}
+
+.btns-cot-cli{
+    float: right;
+    padding-right: 50px;
+}
+/* .btn-group{
+    float: right;
+    margin-top: 15%;
+    padding-right: 30px;
+} */
+
+.btn-danger{
+    margin-right: 30px;
+    background-color: #ffffff;
+    border: 2px solid #dc3545;
+    color: #dc3545!important;
+    font-weight: 500;
+}
+
+.btn-default{
+    background-color: #15D52E;
+    color: #ffffff!important;
+}
+
+
+.btn-default, .btn-danger{
+    border-radius: 20px;
+}
+
+.btn-danger:hover, .btn-default:hover{
+    color: #ffffff!important;
+}
+
+.btn-danger:hover{
+    background-color: #dc3545;
+}
+
+/* termino cotacoes */
+
+/* cotacao e pedido */
+
+.cotacao-info{
+    margin-top: 30px!important;
+    min-height: 250px;
+    margin-bottom: 35px;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.09);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.info-right{
+    float: right;
+    width: 65%;
+}
+
+.info-right, .info-left, .info-total{
+    display: inline-flex;
+    padding-top: 40px;
+    font-weight: 700;
+    color: #6C757D;
+}
+
+.info-left{
+    width: 700px;
+}
+
+.info-left> ul> li, .info-right> ul> li{
+    padding-bottom: 15px;
+    
+}
+
+.info-total{
+    padding-right: 48px;
+    padding-top: 0;
+}
+
+/*Listagem de pedidos e de cotações*/
+
+.container-listagem {
+    margin-top: 7%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.09);
+    position: relative;
+    overflow: auto;
+    width: 70%;
+    max-width: 100%;
+    min-height: 600px;
+}
+
+.title, .ordenar-left, .ordenar-right{
+    /* display: inline-flex; */
+    padding-top: 20px;
+    font-weight: 400;
+    color: #6C757D;
+}
+
+.ordenar-left{
+    padding-left: 60px;
+}
+
+.ordenar-right{
+    padding-left: 300px;
+}
+
+.ordernar-main{
+    padding-left: 230px;
+    padding-top: 50px;
+    color: #6C757D;
+    font-weight: 700;
+}
+
+.dropdown-cot{
+    display: block;
+    width: 150px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

@@ -1,0 +1,64 @@
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="/">Home</a> -->
+      <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse"
+        data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngbCollapse]="isCollapsed">
+
+        <app-menu-login></app-menu-login>
+
+        <!-- <ul class="navbar-nav">
+          <li class="nav-item" style="padding-right: 30px;">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/conta/perfil']">Perfil &nbsp;<i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i>
+            </a>
+          </li>
+        </ul> -->
+        <ul [ngSwitch]="usuarioLogado()" class="navbar-nav flex-grow-1">
+
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" href="/">Home</a>
+          </li>
+          <!--Inserir rota dentro de cotação-->
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/cotacao/cotacar-selos']">Carrinho</a>
+          </li>
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/cotacao/minhas-cotacoes']"
+              routerLinkActive="router-link-active">Acompanhamento Cotação</a>
+          </li>
+
+          <!--Remover e linkar com Cotações-->
+          <!-- <a class="nav-link text-light" [routerLink]="['/cotacao/cotacoes-pendentes']"
+              routerLinkActive="router-link-active">Aprovações</a>
+          </li> -->
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/cotacao/lista-de-cotacoes']"
+              routerLinkActive="router-link-active">Cotações</a>
+          </li>
+          <!--Inserir o codigo dentro de listar pedidos-->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/pedido/pedido-detalhe']"
+              routerLinkActive="router-link-active">Pedidos</a>
+          </li> -->
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/pedido/lista-pedidos']"
+              routerLinkActive="router-link-active">Listar Pedidos</a>
+          </li>
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" id="saudacaoUsuario" href="javascript:void(0)">{{ UserID }}</a>
+          </li>
+          <li *ngSwitchCase="true" class="nav-item">
+            <a class="nav-link text-light" href="javascript:void(0)" (click)="logout()">
+              Sair <span class="fas fa-sign-out-alt"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

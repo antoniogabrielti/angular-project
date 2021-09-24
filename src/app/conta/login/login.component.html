@@ -1,0 +1,40 @@
+<div class="container main-container login">
+    <img src="/assets/logo.png" class="logo">
+    <h2 class="title">Bem Vindo</h2>
+
+    <form novalidate (ngSubmit)="login()" [formGroup]="loginForm">
+
+        <div class="alert alert-danger" *ngIf="errors.length > 0">
+            <h3 id="msgRetorno">Ocorreu algum erro:</h3>
+            <ul>
+                <li *ngFor="let error of errors">{{ error }}</li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <!-- <label class="col-md-2 control-label">Username</label> -->
+            <div class="col-md-8">
+                <input class="form-control" id="userId" type="text" placeholder="username" formControlName="UserID" [ngClass]="{'is-invalid': displayMessage.UserID }" />
+                <span class="text-danger" *ngIf="displayMessage.UserID">
+                                <p [innerHTML]="displayMessage.UserID"></p>
+                            </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!-- <label class="col-md-2 control-label">Senha</label> -->
+            <div class="col-md-8">
+                <input class="form-control" id="password" type="password" placeholder="Senha" formControlName="Password" [ngClass]="{'is-invalid': displayMessage.Password }" />
+                <span class="text-danger" *ngIf="displayMessage.Password">
+                                <p [innerHTML]="displayMessage.Password"></p>
+                            </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="login" [disabled]="!loginForm.valid" type="submit">Login</button></span>
+            </div>
+        </div>
+    </form>
+</div>

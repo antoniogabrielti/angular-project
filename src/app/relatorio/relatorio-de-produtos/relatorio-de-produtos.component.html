@@ -1,0 +1,33 @@
+<div class="container  container-listagem ">
+    <header class="title text-center">
+      <h2>Relatório de produtos mais pedidos</h2>
+      <hr>
+    </header>
+
+    <!-- <div class="col-xs-12 col-6 col-md-2 form-group"  style="margin-left: 100px;"> 
+      <label>Data Inicio</label>
+      <input type="text" placeholder="DatePicker" class="form-control" bsDatepicker >
+    </div>
+
+    <div class="col-xs-6 col-6 col-md-2 form-group"  style="margin-left: 100px;"> 
+      <label>Data Fim</label>
+      <input type="text" placeholder="DatePicker" class="form-control" bsDatepicker>
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-12 col-md-3 form-group" style="margin-left: 400px;">
+          <input
+          type="text"
+          placeholder="Selecione data Inicio e Final"
+          class="form-control"
+          bsDatepicker
+          bsDaterangepicker
+          [bsConfig]="{ isAnimated: true }">
+        </div>
+      </div>
+    </div>
+    <div>
+      <a class="btn btn-success" href="" style="margin-left: 470px;">Gerar Relatório</a>
+    </div>
+</div>

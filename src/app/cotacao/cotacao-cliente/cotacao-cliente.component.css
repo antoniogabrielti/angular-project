@@ -1,0 +1,16 @@
+.space-row{
+    margin-left: 50px;
+}
+
+.space-betwen-label{
+    margin-left: 10px;
+}
+
+.input-quantidade{
+    width: 40%;
+    height: 30px;
+}
+
+input{
+    border: 1px #ced4da solid;
+}

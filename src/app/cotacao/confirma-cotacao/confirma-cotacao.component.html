@@ -1,0 +1,38 @@
+<header class="title text-center">
+    <h2>Cotação</h2>
+  </header>
+<div class="container p-3 my-3 cotacao-template">
+    <table class="table-cotacao">
+        <thead>
+            <tr>
+                <th>Cód. Produto</th>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário R$ </th>
+                <th>Total R$</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of itens">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.qty}}</td>
+                <td>{{item.unitValue | currency:'BRL':'symbol':'1.2-2':'pt'}}</td>
+                <!-- <td>{{item.total}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <div class="btn-group btns-cot-cli">
+            <div> 
+                <!-- <a class="btn btn-danger "><span>Cancelar</span></a> -->
+                <input type="submit" value="Cancelar" class="btn btn-danger">
+
+            </div>
+            <div>        
+                <input type="submit" value="Aprovar" class="btn btn-default">
+                <!-- <a class="btn btn-default "><span>Confirmar</span></a> -->
+            </div>
+        </div>
+    </footer>
+</div>

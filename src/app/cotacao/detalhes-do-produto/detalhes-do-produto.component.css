@@ -1,0 +1,33 @@
+.produto-detalhe{
+    display: inline-block;
+    text-align: justify;
+    margin-left: 100px;
+}
+
+.img-detalhe{
+    display: inline-block;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.qtd-align{
+    display: inline-flex;
+}
+
+
+.tamanho-detalhe{
+    width: 45%;
+    min-height: 405px;
+}
+
+.input-qtd{
+    width: 114px;
+}
+
+
+.btn-alinhamento{
+    margin-top: 20px;
+    width: 235px;
+    text-align: center;
+    margin-left: 19rem;
+}

@@ -1,0 +1,30 @@
+.btn-info{
+    margin-left: 20px;
+}
+
+input, select{
+    width: 320px;
+}
+
+.alinhamento{
+    display: inline-flex;
+    padding-left: 15px;
+}
+
+.alinhamento-linhas{
+    float: left;
+    margin-right: 100px;
+}
+
+
+.phone, .estado{
+    width: 200px;
+}
+
+.number{
+    width: 150px;
+}
+
+.btn-success{
+    width: 105px;
+}

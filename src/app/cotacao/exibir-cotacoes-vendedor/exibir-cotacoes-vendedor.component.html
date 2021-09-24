@@ -1,0 +1,24 @@
+<div class="container  container-listagem ">
+  <header class="title text-center">
+    <h2>Listagem de Cotações</h2>
+    <!-- <hr> -->
+  </header>
+
+  <table class="table-cotacao">
+    <thead>
+        <tr>
+            <th>Cotação</th>
+            <th>Cliente</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let cotacao of cotacoes">
+            <td><a [routerLink]="['/cotacao/cotacao-pendente', cotacao.id]">{{cotacao.id}}</a></td>
+            <td>{{cotacao.companyName}}</td>
+            <td>{{cotacao.status ? "Cancelado" : "Pendente"}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

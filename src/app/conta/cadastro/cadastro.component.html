@@ -1,0 +1,84 @@
+<div class="container main-container formulario">
+    <h2 class="text-center title">Cadastro de usuário</h2>
+
+    <hr>
+    <div class="row ">
+        <div class="col-md-10">
+            <form novalidate="novalidate" (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm" style="margin-left: 60px;">
+
+                <div class="alert alert-danger" *ngIf="errors.length > 0">
+                    <h3 id="msgRetorno">Opa! Alguma coisa não deu certo:</h3>
+                    <ul>
+                        <li *ngFor="let error of errors">{{ error }}</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Username</label>
+                    <div>
+                        <input class="form-control" id="username" type="text" placeholder="" formControlName="UserID" [ngClass]="{'is-invalid': displayMessage.UserID }" />
+
+                        <span class="text-danger" *ngIf="displayMessage.UserID">
+                            <p [innerHTML]="displayMessage.UserID"></p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">E-mail</label>
+                    <div>
+                        <input class="form-control" id="email" type="email" placeholder="" formControlName="Email" [ngClass]="{'is-invalid': displayMessage.Email }" />
+
+                        <span class="text-danger" *ngIf="displayMessage.Email">
+                            <p [innerHTML]="displayMessage.Email"></p>
+                        </span>
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Senha</label>
+                        <div>
+                            <input class="form-control" id="password" type="password" placeholder="" formControlName="Password" [ngClass]="{ 'is-invalid': displayMessage.Password }" />
+                            <span class="text-danger" *ngIf="displayMessage.Password">
+                            <p [innerHTML]="displayMessage.Password"></p>
+                        </span>
+                        </div>
+                    </div>
+
+                    <!-- 
+                    <div class="form-group">
+                        <label class="control-label">Confirme a senha</label>
+                        <div>
+                            <input class="form-control" id="confirmPassword" type="password" placeholder="" formControlName="confirmPassword" [ngClass]="{ 'is-invalid': displayMessage.confirmPassword }" />
+                            <span class="text-danger" *ngIf="displayMessage.confirmPassword">
+                            <p [innerHTML]="displayMessage.confirmPassword"></p>
+                        </span>
+                        </div>
+                    </div> -->
+
+                    <div class="form-group row ">
+                        <label class="control-label" for="Role"></label>
+                        <input type="radio"  class="radio-display" value="CUSTOMER" class="radio-space" id="role" formControlName="Role" name="Role" >Cliente &nbsp;
+                        <input type="radio" class="radio-display" value="SALESMAN"  id="role" formControlName="Role" name="Role">Vendedor &nbsp;
+                        <input type="radio" class="radio-display"value="MANAGER" id="role" formControlName="Role" name="Role">Gerente
+                    </div>
+                    <div formGroupName="Customer">
+                        <div class="form-group" >
+                            <label class="control-label">CNPJ</label>
+                            <div>
+                                <input class="form-control" id="cnpj" type="text" placeholder="" formControlName="Cnpj" [textMask]="{mask: MASKS.cnpj.textMask}" [ngClass]="{'is-invalid': displayMessage.Cnpj }" />
+                                <span class="text-danger" *ngIf="displayMessage.Cnpj">
+                                    <p [innerHTML]="displayMessage.Cnpj"></p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="form-group ">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" [disabled]="!cadastroForm.valid">&nbsp;
+                    <a class="btn btn-info" [routerLink]="[ '/home']">Voltar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

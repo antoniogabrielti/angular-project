@@ -1,0 +1,62 @@
+<header class="title text-center">
+  <h2>Detalhes do Pedido</h2>
+</header>
+<div class="container  cotacao-info">
+  <div class="info-left">
+    <ul style="margin-left: 50px;">
+      <li>Cód. Pedido: </li>
+      <li>Razão Social: </li>
+      <li>Endereço: </li>
+    </ul>
+    <!-- <ul *ngFor="let cli of cliente">
+      <li>{{cli.CodCli}}</li>
+      <li>{{cli.razaoSocial}}</li>
+      <li>{{cli.endereco}}</li>
+    </ul> -->
+  </div>
+
+  <div class="info-right">
+    <ul style="margin-left: 400px;">
+      <li>Cód. Cotação: </li>
+      <li>Status: </li>
+      <li>Data de processamento: </li>
+    </ul>
+    <!-- <ul *ngFor="let cli of cliente">
+      <li>{{cli.CodCotacao}}</li>
+      <li>{{cli.status}}</li>
+      <li>{{cli.dataProc}}</li>
+    </ul> -->
+  </div>
+
+</div>
+
+<div class="container p-3 my-3 cotacao-template">
+  <table class="table-cotacao">
+    <thead>
+      <tr>
+        <th>Cód. Produto</th>
+        <th>Descrição</th>
+        <th>Quantidade</th>
+        <th>Preço Unitário R$ </th>
+        <th>Total R$</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of pedido">
+      <tr>
+        <th>{{item.codPedido }}</th>
+        <th>{{item.descricao}}</th>
+        <th>{{item.quantidade}}</th>
+        <th>{{item.preco | currency:'BRL':'symbol':'1.2-2'}}</th>
+        <th>{{item.total | currency:'BRL':'symbol':'1.2-4'}}</th>
+      </tr>
+    </tbody>
+  </table>
+  <div style="float: right; display: inline-grid;">
+    <div class="info-total mx-auto">
+      <ul style="display: inline-flex;">
+        <li>Valor Total:</li>&nbsp;&nbsp;
+        <li>R$ 1.500,00</li>
+      </ul>
+    </div>
+  </div>
+</div>

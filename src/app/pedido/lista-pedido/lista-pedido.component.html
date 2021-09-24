@@ -1,0 +1,23 @@
+<div class="container  container-listagem ">
+    <header class="title text-center">
+      <h2>Listagem de Pedidos</h2>
+    </header>
+  
+    <table class="table-cotacao">
+      <thead>
+          <tr>
+              <th>Pedido</th>
+              <th>Cliente</th>
+              <th>Data</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let pedido of pedidos">
+              <td>{{pedido.id}}</td>
+              <td>{{pedido.companyName}}</td>
+              <td>{{pedido.date}}</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+  

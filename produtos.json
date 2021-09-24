@@ -1,0 +1,53 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "descricao": "selo 2PL",
+            "dimensão": "80mm x 20mm",
+            "preco": 2.50,
+            "desconto": 0,
+            "imagem": "selo4.jpg"
+        },
+        {
+            "id": 2,
+            "descricao": "selo Premium",
+            "dimensão": "150mm x 60mm",
+            "preco": 10.50,
+            "desconto": 0,
+            "imagem": "selo3.jpg"
+        },
+        {
+            "id": 3,
+            "descricao": "selo Master",
+            "dimensão": "100mm x 40mm",
+            "preco": 2.00,
+            "desconto": 0,
+            "imagem": "selo5.jpg"
+        }
+    ],
+
+    "cotacao": [
+        {
+            "codProd": 11,
+            "descricao": "selo 2PL",
+            "quantidade": 200,
+            "preco": 2.50,
+            "total": 500
+        },
+        {
+            "codProd": 12,
+            "descricao": "selo 2PL",
+            "quantidade": 200,
+            "preco": 2.50,
+            "total": 500
+        },
+        {
+            "codProd": 13,
+            "descricao": "selo 2PL",
+            "quantidade": 200,
+            "preco": 2.50,
+            "total": 500
+        }
+    ]
+
+}

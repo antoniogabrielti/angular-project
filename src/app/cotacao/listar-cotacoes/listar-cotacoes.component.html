@@ -1,0 +1,39 @@
+<header class="title text-center">
+  <h2>Minhas Cotações</h2>
+</header>
+<div class="container-xl" *ngFor="let item of cotacaoCliente">
+  <div class="font-weight-bold" style="padding-left: 195px;; display: inline-flex" >
+    <span class="align-baseline">Número da cotação: </span>
+    <p style="padding-left: 10px;">{{item.id}}</p>
+  </div>
+  <div class="font-weight-bold" style="padding-left: 195px;; display: inline-flex">
+    <span class="align-baseline">Data da solicitação: </span>
+    <p style="padding-left: 10px;">{{item.quotationDate | date:'dd/MM/yyyy'}}</p>
+  </div>
+  <div class="font-weight-bold" style="padding-left: 195px;; display: inline-flex">
+    <span class=" align-baseline">Status:</span>
+    <p class="text-warning" style="padding-left: 10px;">{{item.status ? "Cancelado" : "Pendente"}}</p>
+  </div>
+  <div class="container cotacao-template">
+    <table class="table-cotacao">
+      <thead>
+        <tr >
+          <th>Cód. Produto</th>
+          <th>Descrição</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário R$ </th>
+          <th>Total R$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let produto of item.Products">
+          <td>{{produto.id}}</td>
+          <td>{{produto.description}}</td>
+          <td>{{produto.qty}}</td>
+          <td>{{produto.unitValue}}</td>
+          <td>{{produto.totalValue}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

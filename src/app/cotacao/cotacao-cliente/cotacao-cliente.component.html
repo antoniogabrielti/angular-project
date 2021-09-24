@@ -1,0 +1,39 @@
+<header class="title text-center">
+  <h2>Faça a sua cotação</h2>
+</header>
+
+<div class="container main-container" style="padding-top: 40px;">
+
+  <div class="row text-center">
+      <div *ngFor="let produto of produtos; index as id" class="col-md-4" style="padding-bottom: 30px;">
+          <div class="card h-100">
+              <a class="text-decoration-none">
+                  <!--primeiro item dentro de colchetes é o caminho da url e o segundo é o parametro-->
+                  <div style="align-content: center;">
+                      <img src="{{produto.imgUrl}}" height="164px" width="200px" alt="">
+                  </div>
+              </a>
+              <div class="card-body" >
+                  <h4 class="card-title">
+                    <a class="card-title" [title]="produto.description + ' detalhes'" [routerLink]="['/cotacao/detalhes',produto.id]">
+                        {{produto.description | titlecase}}
+                    </a>
+                  </h4>
+                  <!-- <p>Preço:</p>
+                  <div>
+                      <h4>{{produto.unitValue | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4>
+                  </div> -->
+              </div>
+              <!-- <div class="card-footer">
+                  <div>
+                      <span>Quantidade: </span>
+                     <div>
+                          <input> {{produto.quantidade  | number: '1.0-0'}}
+                      </div>
+                      <br>
+                  </div>
+              </div> -->
+          </div>
+      </div>
+  </div>
+</div>
